@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  paymentgateway.api:
+    image: ${DOCKER_REGISTRY-}paymentgatewayapi
+    build:
+      context: .
+      dockerfile: src/PaymentGateway.API/Dockerfile
+
+
+
+  rabbitmq:
+    container_name: paymentgateway.rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"

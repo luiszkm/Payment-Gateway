@@ -11,7 +11,7 @@ public class CreditCardPaymentValidation : BaseValidation
         ValidateId(creditCardPayment.Id);
         ValidateString(creditCardPayment.CardNumber, nameof(creditCardPayment.CardNumber));
         ValidateString(creditCardPayment.CardHolderName, nameof(creditCardPayment.CardHolderName));
-        ValidateDate(creditCardPayment.ExpiryDate, nameof(creditCardPayment.ExpiryDate));
+        // ValidateDate(creditCardPayment.ExpiryDate, nameof(creditCardPayment.ExpiryDate));
         ValidateString(creditCardPayment.Cvv, nameof(creditCardPayment.Cvv));
         ValidateDecimal(creditCardPayment.Amount, nameof(creditCardPayment.Amount));
         ValidateCreditCardNumber(creditCardPayment.CardNumber, nameof(creditCardPayment.CardNumber));
