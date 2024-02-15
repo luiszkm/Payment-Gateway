@@ -7,5 +7,6 @@ internal class StripeConnection
     {
         StripeConfiguration.ApiKey = apiKey;
     }
+
     public string ApiKey { get; set; }
 }
